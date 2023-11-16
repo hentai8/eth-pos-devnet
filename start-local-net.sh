@@ -5,6 +5,8 @@ fi
 
 if [ ! -d "execution/builder" ]; then
     git clone https://github.com/flashbots/builder.git execution/builder
+    # 进到execution/builder中,然后执行
+    git checkout local-relay-fix
     docker build -t eth-pos-devnet_geth:latest execution/builder
 fi
 
